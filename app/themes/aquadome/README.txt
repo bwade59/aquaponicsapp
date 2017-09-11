@@ -5,7 +5,7 @@ How to use this theme
 Add the following line inside your <head> tag _AFTER_ the
 webcomponents-lite.min.js and other HTML imports:
 
-<link rel="import" href="path/to/seven-seas.html">
+<link rel="import" href="path/to/aquadome.html">
 
 
 
@@ -16,4 +16,4 @@ To use this theme within your own custom elements, add the
 following line inside your <dom-module> tag in each of your
 custom elements:
 
-<link rel="import" href="path/to/seven-seas.css" type="css">
+<link rel="import" href="path/to/aquadome.css" type="css">
