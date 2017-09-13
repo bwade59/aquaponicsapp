@@ -63,6 +63,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <body unresolved class="fullbleed layout vertical">
 <span id="browser-sync-binding"></span>
+<dom_module>
+
 <template is="dom-bind" id="app">
 
   <paper-drawer-panel id="paperDrawerPanel">
@@ -114,32 +116,32 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
               <paper-material style="width:50%;justified:left">
                 <div class="horizontal layout start justified">FEED
-                  <paper-toggle-button><img src="images/fish.png"></paper-toggle-button>
+                  <paper-toggle-button id="feed_toggle" class="green" on-change="feed_changed"></paper-toggle-button>
                 </div>
 
                 <hr>
                 <div class="horizontal layout start justified">PUMP 1
-                  <paper-toggle-button checked><img src="images/water.png"></paper-toggle-button>
+                  <paper-toggle-button id="pump1_toggle" class="green" on-change="{{pump1_changed}}" checked></paper-toggle-button>
                 </div>
 
                 <hr>
                 <div class="horizontal layout start justified">PUMP 2
-                  <paper-toggle-button><img src="images/water.png"></paper-toggle-button>
+                  <paper-toggle-button id="pump2_toggle" class="green" on-change="{{pump2_changed}}"></paper-toggle-button>
                 </div>
 
                 <hr>
                 <div class="horizontal layout start justified">VENT
-                  <paper-toggle-button><img src="images/vent.png"></paper-toggle-button>
+                  <paper-toggle-button id="vent_toggle" class="green" on-change="{{vent_changed}}"></paper-toggle-button>
                 </div>
 
                 <hr>
                 <div class="horizontal layout start justified">FAN
-                  <paper-toggle-button><img src="images/fan.png"></paper-toggle-button>
+                  <paper-toggle-button id="fan_toggle" on-change="{{fan_changed}}"></paper-toggle-button>
                 </div>
 
                 <hr>
                 <div class="horizontal layout start justified">HEAT
-                  <paper-toggle-button><img src="images/heat.png"></paper-toggle-button>
+                  <paper-toggle-button id="heat_toggle" on-change="{{heat_changed}}"></paper-toggle-button>
                 </div>
 
               </paper-material>
@@ -198,10 +200,81 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   -->
 
 </template>
-
 <!-- build:js scripts/app.js -->
 <script src="scripts/app.js"></script>
 <!-- endbuild-->
+
+<script>
+    Polymer({
+      ready: function() {
+        this.$.toggle.addEventListener('change', function () {
+          if (this.checked) {
+            console.log("event listener toggle is " + this.checked);
+          } else {
+            console.log("event listener toggle is " + this.checked);
+          }
+        });
+      },
+
+      feed_changed: function() {
+        var btn = this.$.onChange;
+        if (btn.checked) {
+          alert("on-change toggle is " + btn.checked);
+        } else {
+          alert("on-change toggle is " + btn.checked);
+        }
+      },
+
+      pump1_changed: function() {
+        var btn = this.$.onChange;
+        if (btn.checked) {
+          console.log("on-change toggle is " + btn.checked);
+        } else {
+          console.log("on-change toggle is " + btn.checked);
+        }
+      },
+
+      pump2_changed: function() {
+        var btn = this.$.onChange;
+        if (btn.checked) {
+          console.log("on-change toggle is " + btn.checked);
+        } else {
+          console.log("on-change toggle is " + btn.checked);
+        }
+      },
+
+      vent_changed: function() {
+        var btn = this.$.onChange;
+        if (btn.checked) {
+          console.log("on-change toggle is " + btn.checked);
+        } else {
+          console.log("on-change toggle is " + btn.checked);
+        }
+      },
+
+      fan_changed: function() {
+        var btn = this.$.onChange;
+        if (btn.checked) {
+          console.log("on-change toggle is " + btn.checked);
+        } else {
+          console.log("on-change toggle is " + btn.checked);
+        }
+      },
+
+      heat_changed: function() {
+        var btn = this.$.onChange;
+        if (btn.checked) {
+          console.log("on-change toggle is " + btn.checked);
+        } else {
+          console.log("on-change toggle is " + btn.checked);
+        }
+      }
+    });
+  </script>
+</dom_module>
+
 </body>
 
 </html>
+
+
