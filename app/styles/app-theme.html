@@ -150,6 +150,12 @@ paper-toggle-button {
       font-weight: 400;
     }
 
+paper-toolbar {
+  --paper-toolbar: {
+    @apply(--layout-vertical);
+    @apply(--layout-center-center);
+  };
+}
     #drawer .paper-toolbar {
       margin-left: 16px;
     }
@@ -217,4 +223,11 @@ paper-toggle-button {
   @media all and (min-width: 1281px) and (max-width: 1600px) { }
   /* desktop-xlarge */
   @media all and (min-width: 1601px) and (max-width: 1920px) { }
+
+  .flex-wrap {
+      @apply(--layout-horizontal);
+      @apply(--layout-wrap);
+      width: 100%;
+  }
+
 </style>
