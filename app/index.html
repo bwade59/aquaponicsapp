@@ -67,47 +67,46 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <template is="dom-bind" id="app">
 
-    <paper-material class="fit" style="background-color:#79BD8F">
-    <!-- Main Toolbar -->
-    <paper-toolbar id="mainToolbar" class="medium" style="background-color:#00A388">
-      <!-- Application name -->
+    <paper-material class="fit" style="background-color:#81a556">
+      <!-- Main Toolbar -->
+      <paper-toolbar id="mainToolbar" class="medium" style="background-color:#3f5729">
+        <!-- Application name -->
         <div class="app-name">PAPA'S IGLOO CONTROLLER</div>
-    </paper-toolbar>
-    <!-- Main Content -->
+      </paper-toolbar>
+      <!-- Main Content -->
       <div class="content">
-        <section data-route="home">
-          <div class="horizontal layout">
-            <div class="vertical layout">
-              <paper-material style="justified:left;width:35vw;background-color:#BEEB9F">
+        <div class="vertical layout" style="margin:2vw;">
+          <paper-card class="horizontal layout center-justified" style="background-color:#81a556">
+            <iron-image style="padding:1vw;width:100vw; height:40vw; background-color: lightgray;"
+                        sizing="cover" preload fade src="http://lorempixel.com/600/400"></iron-image>
+          </paper-card>
+          <div class="horizontal layout center-justified">
+            <div>
+              <paper-material style="width:35vw;background-color:#81a556" elevation="0">
                 <div class="horizontal layout start justified">FEED
                   <paper-toggle-button id="feed_toggle" class="green"
                                        on-change="feed_changed"></paper-toggle-button>
                 </div>
-
-                <hr>
+                <div style="height:2vw"></div>
                 <div class="horizontal layout start justified">PUMP 1
                   <paper-toggle-button id="pump1_toggle" class="green" on-change="{{pump1_changed}}"
                                        checked></paper-toggle-button>
                 </div>
-
-                <hr>
+                <div style="height:2vw"></div>
                 <div class="horizontal layout start justified">PUMP 2
                   <paper-toggle-button id="pump2_toggle" class="green"
                                        on-change="{{pump2_changed}}"></paper-toggle-button>
                 </div>
-
-                <hr>
+                <div style="height:2vw"></div>
                 <div class="horizontal layout start justified">VENT
                   <paper-toggle-button id="vent_toggle" class="green"
                                        on-change="{{vent_changed}}"></paper-toggle-button>
                 </div>
-
-                <hr>
+                <div style="height:2vw"></div>
                 <div class="horizontal layout start justified">FAN
                   <paper-toggle-button id="fan_toggle" on-change="{{fan_changed}}"></paper-toggle-button>
                 </div>
-
-                <hr>
+                <div style="height:2vw"></div>
                 <div class="horizontal layout start justified">HEAT
                   <paper-toggle-button id="heat_toggle" on-change="{{heat_changed}}"></paper-toggle-button>
                 </div>
@@ -117,36 +116,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <div style="width:5vw"></div>
             <div class="vertical layout">
               <div class="flex"></div>
-              <paper-material style="justified:left;width:35vw;background-color:#BEEB9F">
-                <div class="horizontal layout start justified">FEED
-                </div>
-
-                <hr>
-                <div class="horizontal layout start justified">PUMP 1
-                </div>
-
-                <hr>
-                <div class="horizontal layout start justified">PUMP 2
-                </div>
-
-                <hr>
-                <div class="horizontal layout start justified">VENT
-                </div>
-
-                <hr>
-                <div class="horizontal layout start justified">FAN
-                </div>
-
-                <hr>
-                <div class="horizontal layout start justified">HEAT
-                </div>
-
+              <paper-material style="justified:left;width:35vw;background-color:#81a556" elevation="0">
+                <div class="horizontal layout start justified">Last Feeding:</div>
+                <div style="height:2vw"></div>
+                <div class="horizontal layout start justified">Water pH:</div>
+                <div style="height:2vw"></div>
+                <div class="horizontal layout start justified">Water temp:</div>
+                <div style="height:2vw"></div>
+                <div class="horizontal layout start justified">Ambient temp:</div>
               </paper-material>
             </div>
           </div>
-
-    </section>
-      </div>
+        </div>
     </paper-material>
     <!-- Uncomment next block to enable Service Worker support (1/2) -->
     <paper-toast id="caching-complete"
@@ -260,6 +241,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
       }
     });
+
+
 
 
 
