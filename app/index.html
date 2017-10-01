@@ -66,6 +66,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <dom_module>
 
   <template is="dom-bind" id="app">
+    <iron-ajax
+      auto
+      url="RELATIVE_PATH_TO_JSON_FILE"
+      handle-as="json"
+      last-response="{{jsondata}}">
+    </iron-ajax>
 
     <paper-material class="fit" style="background-color:#81a556">
       <!-- Main Toolbar -->
@@ -116,14 +122,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <div style="width:5vw"></div>
             <div class="vertical layout">
               <div class="flex"></div>
+
               <paper-material style="justified:left;width:35vw;background-color:#81a556" elevation="0">
-                <div class="horizontal layout start justified">Last Feeding:</div>
+                <div class="horizontal layout start justified">Last Feeding: [[jsondata.lastfeeding]]</div>
                 <div style="height:2vw"></div>
-                <div class="horizontal layout start justified">Water pH:</div>
+                <div class="horizontal layout start justified">Water pH: [[jsondata.waterph]]</div>
                 <div style="height:2vw"></div>
-                <div class="horizontal layout start justified">Water temp:</div>
+                <div class="horizontal layout start justified">Water temp: [[jsondata.watertemp]]</div>
                 <div style="height:2vw"></div>
-                <div class="horizontal layout start justified">Ambient temp:</div>
+                <div class="horizontal layout start justified">Ambient temp: [[jsondata.ambtemp]]</div>
               </paper-material>
             </div>
           </div>
@@ -241,6 +248,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
       }
     });
+
 
 
 
