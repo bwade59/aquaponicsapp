@@ -63,13 +63,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <body unresolved class="fullbleed layout vertical">
 <span id="browser-sync-binding"></span>
-<dom_module>
+<dom_module  id="register-me">
 
   <template is="dom-bind" id="app">
     <iron-ajax
       auto
-      url="RELATIVE_PATH_TO_JSON_FILE"
-      handle-as="json"
+      url='mongodb://aquaponics:1q2w3e4r@ds161493.mlab.com:61493/aquaponicsdome'
+      handle-as="jsonp"
       last-response="{{jsondata}}">
     </iron-ajax>
 
@@ -135,6 +135,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </div>
           </div>
         </div>
+      </div>
     </paper-material>
     <!-- Uncomment next block to enable Service Worker support (1/2) -->
     <paper-toast id="caching-complete"
@@ -157,7 +158,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <!-- endbuild-->
 
   <script>
-    Polymer({
+    Polymer({is: "register-me",
       ready: function() {
         this.$.toggle.addEventListener('change', function () {
           if (this.checked) {
@@ -215,45 +216,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       heat_changed: function() {
         var btn = this.$.onChange;
-        if (btn.checked) {            <section data-route="users">
-              <paper-material elevation="1">
-                <h2 class="page-title">Users</h2>
-                <p>This is the users section</p>
-                <a href$="{{baseUrl}}users/Addy">Addy</a><br>
-                <a href$="{{baseUrl}}users/Rob">Rob</a><br>
-                <a href$="{{baseUrl}}users/Chuck">Chuck</a><br>
-                <a href$="{{baseUrl}}users/Sam">Sam</a>
-              </paper-material>
-            </section>
-
-            <section data-route="user-info">
-              <paper-material elevation="1">
-                <h2 class="page-title">User: {{params.name}}</h2>
-                <div>This is {{params.name}}'s section</div>
-              </paper-material>
-            </section>
-
-            <section data-route="contact">
-              <paper-material elevation="1">
-                <h2 class="page-title">Contact</h2>
-                <p>This is the contact section</p>
-              </paper-material>
-            </section>
-
-        </div>
-
+        if (btn.checked) {
           console.log("on-change toggle is " + btn.checked);
         } else {
           console.log("on-change toggle is " + btn.checked);
         }
       }
     });
-
-
-
-
-
-
   </script>
 </dom_module>
 
