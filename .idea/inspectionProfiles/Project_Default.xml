@@ -4,7 +4,7 @@
     <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="8">
+          <list size="18">
             <item index="0" class="java.lang.String" itemvalue="nobr" />
             <item index="1" class="java.lang.String" itemvalue="noembed" />
             <item index="2" class="java.lang.String" itemvalue="comment" />
@@ -13,6 +13,16 @@
             <item index="5" class="java.lang.String" itemvalue="script" />
             <item index="6" class="java.lang.String" itemvalue="paper-toggle-button" />
             <item index="7" class="java.lang.String" itemvalue="dom_module" />
+            <item index="8" class="java.lang.String" itemvalue="iron-ajax" />
+            <item index="9" class="java.lang.String" itemvalue="paper-material" />
+            <item index="10" class="java.lang.String" itemvalue="paper-toolbar" />
+            <item index="11" class="java.lang.String" itemvalue="paper-card" />
+            <item index="12" class="java.lang.String" itemvalue="iron-image" />
+            <item index="13" class="java.lang.String" itemvalue="paper-toast" />
+            <item index="14" class="java.lang.String" itemvalue="platinum-sw-register" />
+            <item index="15" class="java.lang.String" itemvalue="platinum-sw-cache" />
+            <item index="16" class="java.lang.String" itemvalue="paper-button" />
+            <item index="17" class="java.lang.String" itemvalue="paper-fab" />
           </list>
         </value>
       </option>

@@ -7,7 +7,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_3" default="false" project-jdk-name="Python 3.4.3+ (/usr/bin/python3)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_3" default="false" project-jdk-name="Android SDK" project-jdk-type="Android SDK" />
   <component name="PythonCompatibilityInspectionAdvertiser">
     <option name="version" value="2" />
   </component>
